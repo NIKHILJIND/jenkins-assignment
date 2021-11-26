@@ -1,0 +1,63 @@
+pipeline {
+    agent any
+    stages {
+        stage('fetching') {
+            steps {
+                echo "fetching inputs....";
+             }
+        }
+        stage('invoking-tool') {
+            steps {
+                echo "invoking-tool-exe....";
+             }
+        }
+        stage('pre-simulation') {
+            steps {
+                echo "configuring tool....";
+             }
+        }
+        stage('simulation') {
+            steps {
+                echo "performing-simulation-for-VECU....";
+             }
+        }
+        stage('gathering-reports') {
+            steps {
+                echo "getting reports generated from simulation....";
+              }
+        }
+        stage('validating-reports') {
+            steps {
+                echo "validating the test reports....";
+              }
+        }
+        stage('uploading-reports') {
+            steps {
+                echo "pushing generated archifacts to remote repo....";
+              }
+        }
+        stage('emailing-results') {
+            steps {
+                echo "sending results to user....";
+              }
+        }
+    }
+    post {
+         always {
+             echo 'This will run always'
+         }
+         success {
+             echo 'This will run only if successful'
+         }
+         failure {
+             echo 'This will run only if failed'
+         }
+         unstable {
+             echo 'This will run only if the run was marked as unstable'
+         }
+         changed {
+             echo 'This will run only if state of Pipiline has changed'
+             echo 'For example, if the Pipeline was previously failing but is now successful'
+         }
+     }
+}
