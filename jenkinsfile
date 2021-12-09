@@ -1,5 +1,3 @@
-@Library('email-lib')_
-
 pipeline {
     agent any
     stages {
@@ -29,6 +27,7 @@ pipeline {
                 echo "Success Emailing the Results";
                 script {
                     my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
+                    @Library('email-lib')_
                     email_results.run_email_script(my_list)
                 }
         }
@@ -36,6 +35,7 @@ pipeline {
                 echo "failed Emailing the Results";
                 script {
                     my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
+                    @Library('email-lib')_
                     email_results.run_email_script(my_list)
                 }
         }
