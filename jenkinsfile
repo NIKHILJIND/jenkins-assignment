@@ -28,7 +28,7 @@ pipeline {
                 script {
                     my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
                     @Library('email-lib')_
-                    email_results.run_email_script(my_list)
+                    emailResults.run_email_script(my_list)
                 }
         }
         failure {
