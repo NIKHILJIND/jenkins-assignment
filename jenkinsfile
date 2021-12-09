@@ -1,2 +1,2 @@
 @Library('email-lib') _
-testScript ‘system-integrations’
+testScript 'system-integrations'
