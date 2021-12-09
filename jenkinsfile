@@ -1,2 +1,3 @@
+my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
 @Library('email-lib') _
-emailResults '["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]'
+emailResults 'my_list'
