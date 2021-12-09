@@ -28,14 +28,14 @@ pipeline {
         success {
                 echo "Success Emailing the Results";
                 script {
-                    my_list = [${env.BUILD_STATUS}, ${env.BUILD_ID}, "system-integrations"]
+                    my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
                     email_results.run_email_script(my_list)
                 }
         }
         failure {
                 echo "failed Emailing the Results";
                 script {
-                    my_list = [${env.BUILD_STATUS}, ${env.BUILD_ID}, "system-integrations"]
+                    my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
                     email_results.run_email_script(my_list)
                 }
         }
