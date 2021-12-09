@@ -1,2 +1,4 @@
 @Library('email-lib') _
-testScript 'system-integrations'
+
+my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
+testScript.call(my_list)
