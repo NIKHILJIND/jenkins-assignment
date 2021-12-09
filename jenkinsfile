@@ -1,2 +1,4 @@
 @Library('email-lib') _
-emailResults '${currentBuild.currentResult} ${BUILD_ID} system-integrations'
+
+def list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"] as String[]
+emailResults 'list'
