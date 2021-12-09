@@ -1,2 +1,2 @@
 @Library('email-lib') _
-testScript.run_email_script("system-integrations")
+testScript 'system-integrations'
