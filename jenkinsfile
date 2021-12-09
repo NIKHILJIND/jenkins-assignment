@@ -1,7 +1,5 @@
 @Library('email-lib') _
 
-@Library('email-lib') _
-
 pipeline {
     agent any
     stages {
