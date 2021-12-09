@@ -1,2 +1,2 @@
 @Library('email-lib') _
-emailResults '["${currentBuild.currentResult}", "${BUILD_ID}", "system_integrations"]'
+emailResults '${currentBuild.currentResult} ${BUILD_ID} system-integrations'
