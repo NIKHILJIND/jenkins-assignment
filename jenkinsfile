@@ -1,2 +1,4 @@
 @Library('email-lib') _
-emailResults.run_email_script(["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"])
+
+my_list = ["${currentBuild.currentResult}", "${BUILD_ID}", "system-integrations"]
+emailResults.run_email_script(my_list)
