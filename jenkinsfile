@@ -6,43 +6,36 @@ pipeline {
         stage('fetching') {
             steps {
                 echo "fetching inputs....";
-                bat 'python src/fetch-inputs.py'
              }
         }
         stage('invoking-tool') {
             steps {
                 echo "invoking-tool-exe....";
-                bat 'python src/invoke-tools.py'
              }
         }
         stage('pre-simulation') {
             steps {
                 echo "configuring tool....";
-                bat 'python src/pre-simulation.py'
              }
         }
         stage('simulation') {
             steps {
                 echo "performing-simulation-for-VECU....";
-                bat 'python src/simulation.py'
              }
         }
         stage('gathering-reports') {
             steps {
                 echo "getting reports generated from simulation....";
-                bat 'python src/gather-reports.py'
               }
         }
         stage('validating-reports') {
             steps {
                 echo "validating the test reports....";
-                bat 'python src/validate-reports.py'
               }
         }
         stage('uploading-reports') {
             steps {
                 echo "pushing generated archifacts to remote repo....";
-                bat 'python src/uploading-reports.py'
               }
         }
     }
