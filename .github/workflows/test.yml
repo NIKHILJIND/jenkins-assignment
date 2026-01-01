@@ -2,6 +2,7 @@ name: Practice examples
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   Hello:
