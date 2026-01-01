@@ -1,0 +1,7 @@
+jobs:
+  on-commit:
+    runs-on: 'windows-latest'
+    steps:
+      - name: 'Hello World'
+        run: |-
+          echo "Hi Nikhil!!!"
