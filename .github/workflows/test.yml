@@ -2,11 +2,11 @@ name: Practice examples
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   Hello:
     runs-on: 'windows-latest'
     steps:
       - name: 'Hello World'
-        run: |-
-          echo "Hi Nikhil!!!"
+        - run: echo "Hi Nikhil!!!"
