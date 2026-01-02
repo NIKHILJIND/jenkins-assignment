@@ -19,3 +19,18 @@ jobs:
 
       - name: 'Email Notification'
         run: echo "Email to end user"
+
+  Cloned-second-Job:
+    runs-on: 'windows-latest'
+    steps:
+      - name: 'Git Checkout'
+        run: echo "This is git checkout stage"
+
+      - name: 'Stage 1 execution'
+        run: Start-Sleep -s 10
+
+      - name: 'Upload artifacts'
+        run: echo "Artifacts are published to jforg"
+
+      - name: 'Email Notification'
+        run: echo "Email to end user"
