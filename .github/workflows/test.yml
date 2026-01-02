@@ -12,7 +12,7 @@ jobs:
         run: echo "This is git checkout stage"
 
       - name: 'Stage 1 execution'
-        run: Sleep 10
+        run: sleep 10
 
       - name: 'Upload artifacts'
         run: echo "Artifacts are published to jforg"
@@ -28,7 +28,7 @@ jobs:
         run: echo "This is git checkout stage"
 
       - name: 'Stage 1 execution'
-        run: Sleep 10
+        run: sleep 10
 
       - name: 'Upload artifacts'
         run: echo "Artifacts are published to jforg"
@@ -44,7 +44,7 @@ jobs:
         run: echo "This is git checkout stage"
 
       - name: 'Stage 1 execution'
-        run: Sleep 10
+        run: sleep 10
 
       - name: 'Upload artifacts'
         run: echo "Artifacts are published to jforg"
@@ -60,7 +60,7 @@ jobs:
         run: echo "This is git checkout stage"
 
       - name: 'Stage 1 execution'
-        run: Sleep 10
+        run: sleep 10
 
       - name: 'Upload artifacts'
         run: echo "Artifacts are published to jforg"
