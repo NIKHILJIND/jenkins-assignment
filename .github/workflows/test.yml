@@ -15,7 +15,7 @@ jobs:
           path: TeamCity-Assigments
 
       - name: 'Stage 1 execution'
-        run: python myfile.py
+        run: python TeamCity-Assigments/myfile.py
 
       - name: 'Upload artifacts'
         run: echo "Artifacts are published to jforg"
