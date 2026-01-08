@@ -9,7 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Git Checkout'
-        run: echo "This is git checkout stage"
+        uses: actions/checkout@v4
+        with:
+          repository: NIKHILJIND/teamcity-assignments
+          path: TeamCity-Assigments
 
       - name: 'Stage 1 execution'
         run: sleep 10
