@@ -13,6 +13,9 @@ jobs:
         run: echo "3.10.A" > version.txt
       - name: "Upload file"
         uses: actions/upload-artifact@v4
+        with:
+          name: version-info
+          path: version.txt
 
   job_2:
     runs-on: ubuntu-latest
@@ -20,6 +23,8 @@ jobs:
     steps:
       - name: "Upload file"
         uses: actions/download-artifact@v4
+        with:
+          name: version-info
       - name: "Print version of file"
         run: |
           echo "Retrieved version is : "
