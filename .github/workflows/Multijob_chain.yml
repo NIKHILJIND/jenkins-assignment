@@ -2,6 +2,8 @@ name: Practice examples
 
 on:
   push:
+    paths:
+      - '.github/workflows/Multijob_chain.yml'
 
 jobs:
   Build:
