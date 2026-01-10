@@ -28,4 +28,4 @@ jobs:
       - name: "Print version of file"
         run: |
           echo "Retrieved version is : "
-          version.txt
+          cat version.txt
