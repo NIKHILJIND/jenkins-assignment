@@ -1,0 +1,25 @@
+name: artifact sharing example
+
+on:
+  push:
+    paths:
+      - '.github/workflows/Artifact_Sharing_Example.yml'
+
+jobs:
+  runs-on: ubuntu-latest
+  job_1:
+    steps:
+      - name: "Create version file"
+        run: echo "3.10.A" > version.txt
+      - name: "Upload file"
+        uses: actions/upload-artifact@v4
+
+  job_2:
+    needs: job_1
+    steps:
+      - name: "Upload file"
+        uses: actions/download-artifact@v4
+      - name: "Print version of file"
+        run: |
+          echo "Retrieved version is : "
+          version.txt
