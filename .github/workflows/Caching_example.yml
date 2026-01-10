@@ -17,5 +17,5 @@ jobs:
       - name: "Install Dependencies"
         run: |
           python - pip install --upgrade pip
-          pip install pandas openpxl
+          pip install pandas openpyxl
 
